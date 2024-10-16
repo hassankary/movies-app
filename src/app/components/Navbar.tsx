@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { IoCloseSharp } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { PiFilmReelBold } from "react-icons/pi";
 import { FaCircleUser } from "react-icons/fa6";
 import { GiStarFormation } from "react-icons/gi";
 import { HiHome } from "react-icons/hi2";
+import { FaCirclePlay } from "react-icons/fa6";
+
 
 const navbarMenu = [
   {
@@ -37,9 +38,9 @@ export default function Navbar() {
         <div className="flex lg:grid lg:grid-cols-3 h-[60px] items-center">
           <div className="flex">
             <Link href={"/"} className="flex items-center justify-center gap-2">
-              <PiFilmReelBold className="h-8 w-8 text-[#E50914] bg-white rounded-full" />
+              <FaCirclePlay className="h-8 w-8 p-1 text-[#E50914] bg-white rounded-full" />
               <span className=" font-extrabold text-xl">
-                <span className="text-[#E50914]">MOVIES</span>app
+                <span className="text-[#E50914]">MV</span>App
               </span>
             </Link>
           </div>
