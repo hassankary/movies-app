@@ -25,3 +25,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.profile-container {
+  min-height: calc(100vh - 60px - 93px);
+}
+
+@media (min-width: 640px) {
+  .profile-container {
+    min-height: calc(100vh - 60px - 108px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-container {
+    min-height: calc(100vh - 60px - 128px);
+  }
+}
