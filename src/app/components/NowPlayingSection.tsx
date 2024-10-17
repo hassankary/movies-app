@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
-import { authorizations } from "../libs/authorization";
+import { authorizations as KEY } from "../libs/authorization";
 
 interface DataMovies {
   adult: boolean;
@@ -37,7 +37,7 @@ export const NowPlayingSection: React.FC<SectionProps> = (props) => {
           method: "GET",
           headers: {
             accept: "application/json",
-            Authorization: authorizations,
+            Authorization: `Bearer ${KEY}`,
           },
         }
       );

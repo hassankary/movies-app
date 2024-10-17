@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { authorizations } from "@/app/libs/authorization";
+import { authorizations as KEY } from "@/app/libs/authorization";
 import { Card } from "@/app/components/Card";
 
 interface DataMovies {
@@ -22,7 +22,7 @@ interface DataMovies {
 
 export default function Popular() {
   const [popular, setPopular] = useState<DataMovies[]>([]);
-  const [more, setMore] = useState(6);
+  const [more, setMore] = useState(12);
   const [likedMovies, setLikedMovies] = useState<number[]>([]);
 
   const fetchPopularMovies = async () => {
@@ -33,7 +33,7 @@ export default function Popular() {
           method: "GET",
           headers: {
             accept: "application/json",
-            Authorization: authorizations,
+            Authorization: `Bearer ${KEY}`,
           },
         }
       );

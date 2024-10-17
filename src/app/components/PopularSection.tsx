@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { authorizations } from "../libs/authorization";
+import { authorizations as KEY } from "../libs/authorization";
 import { Card } from "./Card";
 
 interface DataMovies {
@@ -35,7 +35,7 @@ export const PopularSection: React.FC<SectionProps> = (props) => {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: authorizations,
+        Authorization: `Bearer ${KEY}`,
       },
     };
 
