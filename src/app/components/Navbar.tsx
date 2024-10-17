@@ -10,7 +10,6 @@ import { GiStarFormation } from "react-icons/gi";
 import { HiHome } from "react-icons/hi2";
 import { FaCirclePlay } from "react-icons/fa6";
 
-
 const navbarMenu = [
   {
     title: "Home",
@@ -103,7 +102,9 @@ export default function Navbar() {
                         <MenuItem>
                           <Link
                             href={`/login`}
-                            className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10 transition-colors"
+                            className={`${
+                              pathname === "/login" ? "bg-white/10" : ""
+                            } group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10 transition-colors`}
                           >
                             Login
                           </Link>
